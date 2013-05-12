@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+	<meta charset="utf-8" />
+	<title>Facebook Javascript Example</title>
+	<style type="text/css">
+div#container {
+	width: 960px;
+	margin: 0 auto;
+}	
+li {
+	margin-top: 20px;
+}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Facebook Javascript Example</h1>
+		<p>This example shows how to create an event handler that responds to a user logging in to Facebook from this site.</p>
+
+		<h2>Log in to Facebook</h2>
+		<fb:login-button autologoutlink="true" onlogin="handleFBLoginEvent();">
+			You really should log in to my website now
+		</fb:login-button>
+
+	</div>
+
+<!-- BEGIN FACEBOOK API STUFF -->	
+<div id="fb-root"></div>
+<script>
+	function handleFBLoginEvent() {
+	    FB.login(function(response) {
+	    	//debugging
+	    	console.log("login response:");
+	    	console.log(response.authResponse);
+
+	        if (response.authResponse) {
+	            // connected
+	            var userId = response.authResponse.userID; //get the user id from the response data
+	        	alert("You are now logged in as user #" + userId + "!");
+	        }
+	    });
+	}
+
+	window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+		  appId: '363484077104579',                        // App ID from the app dashboard
+		  channelUrl: '//onepotcooking.com/students/georgewashington/class11/facebook/login/channel.php', // Channel file for x-domain comms
+		  status: true,                                 // Check Facebook Login status
+		  xfbml: true                                  // Look for social plugins on the page
+		});
+
+		//PUT ANY EXTRA FACEBOOK API STUFF HERE
+
+		FB.getLoginStatus(function(response) {
+	    	//debugging
+	    	console.log("getLoginStatus response:");
+	    	console.log(response);
+
+			if (response.status === 'connected') {
+				// connected
+				alert("you already connected to Facebook!");
+			} else if (response.status === 'not_authorized') {
+				// not_authorized
+				alert("you have not logged in yet!");
+			} else {
+				// not_logged_in
+				alert("you have not logged in yet!");
+			}
+		}); //FB.getLoginStatus
+
+	};
+
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+<!-- END FACEBOOK API STUFF -->	
+
+</body>
+</html>

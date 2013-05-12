@@ -1,0 +1,35 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+	padding: 0px;
+	margin: 0px;
+}
+header, footer, section, article {
+	display: block;
+}
+div.clear {
+	clear: both;
+}
+div#container {
+	background-color: blue;
+	padding: 10px;
+	width: 800px;
+}
+header {
+	background-color: red;
+	height: 100px;
+}
+div.left_nav {
+	background-color: green;
+	width: 300px;
+	height: 400px;
+	float: left;
+}
+div.content {
+	background-color: orange;
+	width: 500px;
+	height: 400px;
+	float: left;
+}
+footer {
+	background-color: purple;
+	height: 100px;
+}

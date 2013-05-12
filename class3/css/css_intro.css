@@ -1,0 +1,89 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li{
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	color: #A69D89;
+}
+
+h1 {
+	color: #E5DFCA;
+	background-color: #61748C;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #A99A90;
+	text-decoration: underline;
+	font-family: helvetica, arial;
+	font-size: 16px;
+	font-weight: bold;
+
+}
+
+p {
+	background-color: #E0C7A3;
+	padding-top: 10px;
+}
+
+p#para2 {
+	color: #E0C7A3;
+	background-color: #A69D89;
+}
+
+ul {
+	background-color: yellow;
+	padding-left: 10px;
+	list-style-type: armenian;
+	list-style-image: url('../images/bullet.gif');
+}
+
+li {
+	background-color: red;
+	list-style-position: inside;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+li#last_item {
+	margin-bottom: 0px;
+}
+
+li.odd {
+	background-color: pink;
+}
+
+div.floaters {
+	background-color: #E0C7A3;
+	text-align: center;
+	margin: 20px;
+	width: 200px;
+	height: 200px;
+	display: block;
+	float: left;
+}
+
+p.foo {
+	background-color: green;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+img#doggy {
+	display: block;
+	float: left;
+	margin: 10px;
+}
+
+div.clear {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+

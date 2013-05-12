@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Using other tags to clear floats</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+//scale font in proportion to browser width
+$( document ).ready( function() {
+            var $body = $('body'); //cache this for performance
+            var setBodyScale = function() {
+                var scaleSource = $body.width();
+                //tweak these values to taste
+                var scaleFactor = 0.15;
+                var maxScale = 600;
+                var minScale = 30; 
+
+                var fontSize = scaleSource * scaleFactor; //Multiply the width of the body by the scaling factor:
+
+                if (fontSize > maxScale) fontSize = maxScale;
+                if (fontSize < minScale) fontSize = minScale; //Enforce the minimum and maximums
+
+                $('body').css('font-size', fontSize + '%');
+            }
+
+            $(window).resize(function(){
+                setBodyScale();
+            });
+
+            //Fire it when the page first loads:
+            $(document).ready(function() {
+            	setBodyScale();
+            });
+        });
+		</script>
+		<style type="text/css">
+html, body, h1, h2, h3, h4, h5, h6, p, pre, ul, li, img {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body {
+	/* set base font size to 10px... default is 16px */
+	font-size: 62.5%;
+}
+div.container {
+	width: 100%;
+}
+br.clear {
+	/* any element can be used to clear, as long as it has no height */
+	clear: both;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: #ffffc0;
+	height: 20%;
+}
+article {
+	float: left;
+	width: 70%;
+	height: 60%;
+	background-color: #c0ffc0;
+}
+aside {
+	background-color: #c0c0ff;
+	width: 30%;
+	height: 60%;
+	float: left;
+}
+footer {
+	background-color: #c0ffff;
+	height: 20%;
+}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+
+			<header>
+				header
+			</header>
+			<article>
+				article
+			</article>
+			<aside>
+				aside
+			</aside>
+			<br class="clear" />
+			<footer>
+				footer
+			</footer>
+
+		</div><!-- //.container -->
+
+	</body>
+</html>

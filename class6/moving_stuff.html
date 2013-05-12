@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Moving Stuff</title>
+		<link rel="stylesheet" type="text/css" href="css/moving_stuff.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+$(document).ready(function() {
+	//detect when a user moves the mouse
+	$(document).mousemove(function(e) {
+		//get the x and y coordinates of the cursor
+		var xCoord = e.pageX;
+		var yCoord = e.pageY;
+		//modify the inner html of an element
+		$('p#debug').html(xCoord + ":" + yCoord);
+
+		//move the bacon to be near the cursor
+		$('img#bacon').css('position', 'absolute');
+		$('img#bacon').css('left', xCoord);
+		$('img#bacon').css('top', yCoord);
+
+	});
+
+});
+		</script>
+	</head>
+	<body>
+		<h1>Moving Stuff</h1>
+		<p id="debug"></p>
+		<img id="bacon" src="images/bacon.png" />
+	</body>
+</html>
+
+
+
+
+
+

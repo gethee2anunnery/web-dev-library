@@ -1,0 +1,37 @@
+<html>
+
+	<head>
+		<title>JQuery Example</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js">
+		</script>
+		<script type="text/javascript">
+	$(document).ready(pageIsLoaded);
+
+	function pageIsLoaded() {
+		//alert('page is loaded');
+
+		$('h1#foo').mouseover(headingIsMousedOver);
+		$('h1#foo').mouseout(headingIsMousedOut);
+	}
+
+	function headingIsMousedOver() {
+		$('h1#foo').css('background-color', 'blue');
+	}
+
+	function headingIsMousedOut() {
+		$('h1#foo').css('background-color', 'white');
+	}
+		</script>
+	</head>
+		<h1 id="foo" onmouseover="doColorSwap();">JQuery Example</h1>
+		<p>This page shows the basics of Javascript</p>
+		<a href="#" onclick="doColorSwap();">Click me to get regular Javascript's style info for the heading element</a> 
+		<br />
+		<a href="#" onclick="doColorSwapWithJQuery();">Click me to get JQuery 's style info for the heading element</a>
+
+	<body>
+	</body>
+
+</html>

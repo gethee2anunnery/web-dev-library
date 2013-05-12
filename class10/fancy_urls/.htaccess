@@ -1,0 +1,6 @@
+RewriteEngine on
+
+#the structure of setting is "RewriteRule <fake url> <real filename>"
+
+RewriteRule this-is-really-great page2.php
+RewriteRule another-url page3.html

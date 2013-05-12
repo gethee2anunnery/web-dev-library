@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>JQuery Selectors</title>
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+//wait for page to load
+$(document).ready(function() {
+	//set up event handlers
+	$("div#tab_container ul li").click(function() {
+		//make the selected tab appear selected
+		$("div#tab_container ul li").removeClass("selected");
+		$(this).addClass('selected');
+		var articleId = this.id + "_article";
+		//make the selected article show up
+		$("div#tab_content_container article").hide();
+		$("article#" + articleId).show();
+	});
+	
+});
+
+		</script>
+	</head>
+	<body>
+		<h1>Show/Hide</h1>
+
+		<div id="tab_container">
+			<ul>
+				<li id="tab1" class="first selected">tab 1</li>
+				<li id="tab2">tab 2</li>
+				<li id="tab3">tab 3</li>
+				<li id="tab4">tab 4</li>
+				<div class="clear"></div>
+			</ul>
+			<div id="tab_content_container">
+				<article id="tab1_article" class="selected">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula turpis, eleifend eget ornare at, sodales eget elit. Aenean euismod tempus eros, id convallis odio congue vestibulum. Pellentesque et orci sed urna fringilla tincidunt. Nunc ornare convallis feugiat. Praesent elementum ultrices ipsum, ut faucibus massa imperdiet eget. Donec at mauris lorem. Mauris vel ligula id ipsum accumsan dictum vitae ac est. Phasellus mauris est, pulvinar non pretium sit amet, fringilla eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+				</article>
+				<article id="tab2_article">
+					Etiam vitae risus lectus. Phasellus eu ligula eu quam gravida sodales. Mauris aliquam vulputate dui, eget eleifend felis congue id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ultrices neque nibh, sodales vulputate libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor odio arcu. Integer gravida, nisl ac aliquet ultricies, velit est adipiscing neque, eleifend ornare metus justo non odio. Nullam sed sapien bibendum velit rhoncus ornare. Cras sed sollicitudin elit.
+				</article>
+				<article id="tab3_article">
+					Vitae risus lectus. Phasellus eu ligula eu quam gravida sodales. Mauris aliquam vulputate dui, eget eleifend felis congue id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ultrices neque nibh, sodales vulputate libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor odio arcu. Integer gravida, nisl ac aliquet ultricies, velit est adipiscing neque, eleifend ornare metus justo non odio. Nullam sed sapien bibendum velit rhoncus ornare. Cras sed sollicitudin elit.
+				</article>
+				<article id="tab4_article">
+					Phasellus eu ligula eu quam gravida sodales. Mauris aliquam vulputate dui, eget eleifend felis congue id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ultrices neque nibh, sodales vulputate libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor odio arcu. Integer gravida, nisl ac aliquet ultricies, velit est adipiscing neque, eleifend ornare metus justo non odio. Nullam sed sapien bibendum velit rhoncus ornare. Cras sed sollicitudin elit.
+				</article>
+			</div>
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+

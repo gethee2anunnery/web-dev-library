@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Image Upload Example</title>
+	</head>
+	<body>
+		<h1>Image Upload Example</h1>
+		<p>This page shows how to upload an image to the server.</p>
+
+		<form action="process_upload.php" method="POST" enctype="multipart/form-data">
+			<label for="animal_name">Animal Name</label>
+			<input id="animal_name" name='animal_name' type="text" />
+			<br />
+			<input type="file" name="animal_image" />
+			<br />
+			<input type="submit" value="Upload Animal!" />
+		</form>
+
+	</body>
+</html>

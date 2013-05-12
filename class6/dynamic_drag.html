@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8" />
+          <title>Dynamic E-Commerce Mock-up</title>
+          <link rel="stylesheet" href="css/dynamic.css" type="text/css" />
+          <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+          <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+          <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+          <script type="text/javascript">
+
+           $(document).ready(function() {
+
+
+            $("div.box").draggable({
+              revert: true
+            });
+
+            $("div#ad_skyscraper").droppable({
+                drop: function(e, ui) {
+                  
+                }
+            });
+
+            $("div.box").mouseover(function() {
+              $("img", this).toggle();
+              $("div", this).toggle();
+
+            });
+
+            $("div.box").mouseout(function() {
+              $("img", this).toggle();
+              $("div", this).toggle();
+
+            });
+
+           
+
+          })
+
+          </script>
+     </head>
+     <body>
+          <div id="container">
+            <header>
+              <div id="ad_banner">
+              </div>
+            </header>
+            <div class="clear"></div>
+            <nav>
+              <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Special Deals</li>
+                <li>Blog</li>
+                <li>Shopping Cart</li>
+              </ul>
+            </nav>
+            <div class="clear"></div>
+            <article>
+              <div id="breadcrumbs">
+                Home > Category > Subcategory
+              </div>
+              <div class="clear"></div>
+              <img id="icon" />
+              <div id="category_description">
+                <strong>Category Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat. Proin sagittis dolor ac risus dapibus sed sodales mauris interdum. Phasellus porttitor imperdiet accumsan. Nulla vulputate arcu ut neque fringilla quis pellentesque nibh ornare. Suspendisse id justo sapien. Vivamus fermentum leo et orci porttitor eget lobortis est dapibus. Curabitur diam tellus, adipiscing sed tristique nec, sagittis vel erat
+              </div>
+               <div class="clear"></div>
+              <div class="displaying">
+                Displaying 9 of 133 results
+              </div>
+              <div class="pages">
+                1 2 3 4 5 6 7 Prev Next
+              </div>
+              <div id="ad_skyscraper">
+                <h2>Shopping Cart</h2>
+              </div>
+              <div id="thumbnails">
+
+                <div class="box">
+                  <img id="thumb1" class="thumbnail" />
+                  <div id="prod_descrip1" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <img id="thumb2" class="thumbnail" />
+                  <div id="prod_descrip2" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <img id="thumb3" class="thumbnail"   />
+                  <div id="prod_descrip3" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+                
+                <div class="clear_left"></div>
+
+                <div class="box">
+                  <img id="thumb4" class="thumbnail"   />
+                  <div id="prod_descrip4" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <img id="thumb5" class="thumbnail"   />
+                  <div id="prod_descrip5" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <img id="thumb6" class="thumbnail"   />
+                  <div id="prod_descrip6" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="clear_left"></div>
+
+                <div class="box">
+                  <img id="thumb7" class="thumbnail"   />
+                  <div id="prod_descrip7" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <img id="thumb8" class="thumbnail"   />
+                  <div id="prod_descrip8" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <img id="thumb9" class="thumbnail"   />
+                  <div id="prod_descrip9" class="thumbnail">
+                    <p><b><u>Product Title</u></b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="displaying">
+                Displaying 9 of 133 results
+              </div>
+              <div class="pages">
+                1 2 3 4 5 6 7 Prev Next
+              </div>
+              <div class="clear"></div>
+              <div id="ad_button">
+              </div>
+              <div id="satisfaction">
+                <strong>Satisfaction Guarantee:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique nisl vitae sapien interdum vehicula egestas lectus placerat. Proin sagittis dolor ac risus dapibus sed sodales mauris interdum. Phasellus porttitor. 
+              </div>
+            </article>
+        	<div class="clear"></div>
+          <footer>
+          </footer>
+          <div class="clear"></div>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+
+
+div.clear {
+	clear: both;
+}
+
+div.clear_right {
+	clear: right;
+}
+
+div#container {
+	margin-left: 10px;
+	margin-top: 15px;
+	font-family: Georgia, Arial;
+	font-size: 12px;
+	width: 910px;
+	border: 1px solid;
+	padding-left: auto;
+	padding-right: auto;
+}
+
+div#ad_banner {
+	border: 1px solid;
+	background-color: blue; 
+	width: 468px;
+	height: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	width: 908px;
+	background-color: blue; 
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav ul {
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+nav ul li {
+	float: left;
+	border: 1px solid;
+	background-color: blue; 
+	padding: 10px;
+	text-align: center;
+	width: 120px;
+
+}
+
+div#breadcrumbs {
+	font-size: 12px
+}
+img#icon {
+	width: 80px;
+	height: 80px;
+	margin-top: 10px;
+	margin-left: 50px;
+	float: left;
+	margin-right: 20px;
+}
+
+div#category_description {
+	margin-top: 20px;
+}
+
+div.displaying {
+	margin-left: 230px;
+	float: left;
+	margin-right: 160px;
+}
+
+div.pages {
+	color: blue;
+	text-decoration: underline;
+}
+
+div#ad_skyscraper {
+	width: 160px;
+	height: 600px;
+	margin-left: 50px;
+	background-color: blue; 
+	margin-top: 10px;
+	margin-right: 20px;
+	float: left;
+}
+
+div#thumbnails {
+	margin-top: 20px;
+
+}
+
+img.thumbnail {
+	float: left; 
+	width: 160px;
+	height: 160px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	display: block;
+
+}
+
+div.thumbnail {
+	float: left; 
+	width: 160px;
+	height: 160px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	display: none;
+}
+
+
+div#ad_button {
+	width: 120px;
+	height: 60px;
+	border: 1px solid;
+	float: left;
+	margin-left: 60px;
+	margin-right: 10px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+div#satisfaction {
+	margin-top: 40px;
+}

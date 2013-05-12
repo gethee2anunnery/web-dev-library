@@ -1,0 +1,3 @@
+title,description,price,image_url
+Red Velvet Cupcake,This is tasty,$9.99,images/redvelvet.png
+Devils Chocolate Cupcake,This is chocolate cupcake,$19.99,images/devlis.png

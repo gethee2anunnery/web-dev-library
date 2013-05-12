@@ -1,0 +1,771 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>Blackbook</title> 
+	<link rel="stylesheet" href="css/blackbook.css" type="text/css" />
+</head> 
+
+<body> 
+
+	<div id="container">
+		<header>
+			<img src="images/logo.png" id="logo" />
+			<nav>
+				 <ul> 
+				 	<li class="selected"><a href="#">Recently Opened</a></li> 
+				 	<li><a href="#">My Ratings</a></li> <li><a href="#">My Friends</a></li> 
+				 	<div class="clear"><div> 
+				 </ul> 
+			</nav>
+		</header>
+		<div class="clear"></div>
+		<div id="search_bar">
+			<div id="search">
+				<img src="images/search.png" id="search"/>
+				<div id="search_rectangle"></div>
+				<div id="submit">Submit</div>
+			</div> 
+			<div id="drop_down">
+				<p id="drop_down_label">Home City:</p>
+				<p id="drop_down_selection">New York</p>
+				<img src="images/dropdown.png" id="dropdown"/>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="search_results">
+			<img src="images/yellowarrows.png" id="recently_opened_bullet" />
+			<p id="recently_opened">Recently Opened</p>
+			<p id="search_location">New York</p>
+			<div id="sort_listings">
+			Sort Listings by Venue Name, Top Rated, <strong>Recently Opened</strong>
+			</div>
+		<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<table>
+			<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Travertine</a>
+					</div>
+					<div class="location">
+					<a href="#">Nolita</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >MEDITERRANEAN</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">The Smile</a>
+					</div>
+					<div class="location">
+					<a href="#">Nolita</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Bar</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >cafe/bar</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Fatty Crab</a>
+					</div>
+					<div class="location">
+					<a href="#">Upper West Side</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >ASIAN (REGIONAL)</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Defonte's</a>
+					</div>
+					<div class="location">
+					<a href="#">Grammercy</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >AMERICAN</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Armani 5th Avenue</a>
+					</div>
+					<div class="location">
+					<a href="#">Midtown East</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Shop</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Beauty</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Ports 1961</a>
+					</div>
+					<div class="location">
+					<a href="#">Meatpacking District</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Shop</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Belts, Ties + Cufflinks</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Loris Diran</a>
+					</div>
+					<div class="location">
+					<a href="#">East Village</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Shop</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Belts, Ties + Cufflinks</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Ace Hotel</a>
+					</div>
+					<div class="location">
+					<a href="#">Garment District</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Hotel</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Boutique</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Above Allen</a>
+					</div>
+					<div class="location">
+					<a href="#">Upper East Side</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Bar</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Hotel Bar</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Union Prime</a>
+					</div>
+					<div class="location">
+					<a href="#">Union Square</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >STEAK</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Casa la Femme</a>
+					</div>
+					<div class="location">
+					<a href="#">West Village</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Bar</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Restaurant Bar</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Casa la Femme</a>
+					</div>
+					<div class="location">
+					<a href="#">Chelsea</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Bar</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >PIZZA</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Smyth</a>
+					</div>
+					<div class="location">
+					<a href="#">Tribeca</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Hotel</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Boutique</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Ortine</a>
+					</div>
+					<div class="location">
+					<a href="#">Prospect Heights</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Italian</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Bar Breton</a>
+					</div>
+					<div class="location">
+					<a href="#">Flatiron</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >FRENCH</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Sweetiepie</a>
+					</div>
+					<div class="location">
+					<a href="#">West Village</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Restaurant</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >AMERICAN</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Webster Hall</a>
+					</div>
+					<div class="location">
+					<a href="#">East Village</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Bar</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Club</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">The Cooper Square Hotel</a>
+					</div>
+					<div class="location">
+					<a href="#">East Village</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Hotel</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Boutique</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="white">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">Mina</a>
+					</div>
+					<div class="location">
+					<a href="#">Nolita</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Shop</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Belts, Ties + Cufflinks</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="gray">
+				<td class="namecell">
+					<div class="name">
+					<a href="#">The Standard Hotel</a>
+					</div>
+					<div class="location">
+					<a href="#">Meatpacking District</a>
+					</div>
+				</td>
+				<td class="typecell">
+					<div class="type">
+					<a href="#" >Hotel</a>
+					</div>
+					<div class="subtype">
+					<a href="#" >Boutique</a>
+					</div>
+				</td>
+				<td class="goingcell">
+					<div class="checkbox_container">
+					<input name="going" type="checkbox" class="going_checkbox" >
+					</div>
+					<div class="going_container">
+					<label class="going_here">I'm going here</label>
+					</div>
+					<div class="clear"></div>
+				</td>
+				<td class="ratingcell">
+					<div class="user_rating">
+					BB User Rating: 0
+					</div>
+					<div class="ratebox">
+					<a href="#" >Click here to rate!</a>
+					</div>
+				</td>
+				</tr>
+		</table>
+		<div class="clear"></div>
+		<footer>
+			<div class="pagination">
+				<ul>
+					<li class="current"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
+					<li><a href="#">Next</a></li>
+					<li><a href="#">Last</a></li>
+				</ul>
+			</div>
+		</footer>
+		<div class="clear"></div>
+	</div>
+
+</body> 
+</html> 

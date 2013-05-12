@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+	<meta charset="utf-8" />
+	<title>Facebook Javascript Example</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+div#container {
+	width: 960px;
+	margin: 0 auto;
+}	
+li {
+	margin-top: 20px;
+}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Facebook Javascript Example</h1>
+
+		<p>This example shows how to request data from the Facebook API and display the results on the page.</p>
+		<p>There are two api calls happening one the user logs in... the first is to get the user's name, and the second is to load the user's friends if they click the link to load friends.</p>
+
+		<h2 id="second_heading">Log in to Facebook</h2>
+		<fb:login-button autologoutlink="true">
+			You really should log in to my website now
+		</fb:login-button>
+
+		<p>Click here to <a href="#" id="friends_loader" onclick="loadFriends();">load up your friends</a>, if you have any.</p>
+
+		<div id="friends">
+		</div>
+
+
+	</div>
+
+<!-- BEGIN FACEBOOK API STUFF -->	
+<div id="fb-root"></div>
+<script>
+	function loadName() {
+		FB.api("/me", {fields: 'id, name, picture, gender'}, function (response) {
+
+			//debugging
+			console.log("/me query response:");
+			console.log(response);
+
+			alert("You are user #" + response.id + ", a " + response.gender + " named " + response.name);
+			$("h2#second_heading").html("Welcome, " + response.name);
+		});
+	}
+
+	function loadFriends() {
+		//this variation of the api call specifies which fields we want to receive
+		FB.api("/me/friends", {fields: 'id, name, picture'}, function (response) {
+
+			//debugging
+			console.log("/me/friends query response:");
+			console.log(response);
+
+			var friends = response.data; //variable to hold friends array
+
+			for (var i=0; i<friends.length; i++) {
+				//debugging
+				console.log('friends data:');
+				console.log(friends[i]); //output the details of each friend
+
+				//append friend data as HTML to the page using
+				$("<p><img src='" + friends[i].picture.data.url + "' />" + friends[i].name + '</p>').appendTo("div#friends");
+			} 
+
+		});
+
+	}
+
+	window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+		  appId: '363484077104579',                        // App ID from the app dashboard
+		  channelUrl: '//onepotcooking.com/students/georgewashington/class11/facebook/pull_from_api/channel.php', // Channel file for x-domain comms
+		  status: true,                                 // Check Facebook Login status
+		  xfbml: true                                  // Look for social plugins on the page
+		});
+
+		//PUT ANY EXTRA FACEBOOK API STUFF HERE
+
+		//log in event handler
+		FB.Event.subscribe('auth.login', function(response) {
+			loadName();
+		});
+
+		//log out event handler
+		FB.Event.subscribe('auth.logout', function(response) {
+			alert("Thank you for logging out!");
+			$("div#friends").html('');
+			$("h2#second_heading").html("Log in to Facebook");
+		});
+
+		//get the user's current login status
+		FB.getLoginStatus(function(response) {
+/*			
+			//debugging
+			console.log("getLoginStatus response:");
+			console.log(response);
+*/
+			//respond to each possible log in status
+			if (response.status === 'connected') {
+				// connected
+				alert("you are already connected to Facebook!");
+				loadName();
+			} 
+			else {
+				// not_logged_in
+				alert("You have not logged in yet.\nWhat are you waiting for?");
+			}
+		}); //FB.getLoginStatus
+
+	};
+
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+<!-- END FACEBOOK API STUFF -->	
+
+</body>
+</html>

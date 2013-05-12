@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>AJAX GET example</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+$(document).ready(function() {
+
+		setInterval(function() {
+//			$("div#bar").load('_snippet.php')
+			$.get('_snippet.php', function(data) {
+				var currentContent = $("div#bar").html();
+				var newContent = data + currentContent;
+				$("div#bar").html(newContent);
+			});
+		}, 5000);
+
+});	
+		</script>
+
+	</head>
+	<body>
+		<h1>AJAX Get Example</h1>
+		<p>
+			This example makes pings to the server every 5 seconds via AJAX.<br />
+			When a response is received, the response data is added to the page
+		</p>
+
+		<div id="bar">
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

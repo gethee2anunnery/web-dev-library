@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>JQuery TextRange Example</title>
+   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <script src="jquery-textrange.js"></script>
+
+   <script>
+   $(document).ready(function() {
+
+      $('input#do_it').click(function() {
+         var oldText = $('textarea#the_text').textrange('get').text;
+         //alert(oldText); //debugging the old text selection
+         var newText = "put the new text with the link here"; //replace this with whatever you want to have in the form
+         $('textarea#the_text').textrange('replace', newText);
+      });
+
+   });
+   </script>
+</head>
+<body>
+
+   <h1>JQuery TextRange Plugin Example</h1>
+   <p>Check out the <a href="https://github.com/dwieeb/jquery-textrange/wiki">documentation on this plugin here</a></p>
+   <p>In this example, you highlight text in the textarea, and click the button.  The text you highlighted is replaced with some new text</p>
+   <form>
+
+      <textarea id="the_text"></textarea>
+
+      <br />
+      <input id="do_it" type="button" value="Do it" />
+
+   </form>
+
+</body>
+</html>

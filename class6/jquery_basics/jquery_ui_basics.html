@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>JQuery UI Basics</title>
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+		<script type="text/javascript">
+//wait for the page to load
+$(document).ready(function() {
+	//when a user clicks the link, fade in the box
+	$("a#fade_in_link").click(function() {
+		$("div#foo").fadeIn(2000);
+	})
+
+	$("a#animate_link").click(function() {
+		$("div#foo").animate({
+			'width': '600px'
+		}, 2000)
+	});
+
+	$("a#move_link").click(function() {
+		$("div#foo").animate({
+			'top': '400px',
+			'left': '200px',
+			'background-color': '#c0c0c0'
+		}, 2000)
+	});
+
+});
+
+		</script>
+		<style type="text/css">
+div#foo {
+	position: absolute;
+	top: 100;
+	left: 100;
+	display: none;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}		
+		</style>
+	</head>
+	<body>
+		<h1>JQuery UI Basics</h1>
+		<a id="fade_in_link" href="#">click to fade in</a>
+		<a id="animate_link" href="#">click to animate</a>
+		<a id="move_link" href="#">click to move</a>
+		<div id="foo">This fades in using JQuery</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

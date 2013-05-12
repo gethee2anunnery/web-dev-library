@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>JQuery Selectors</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+
+$(document).ready(function () {
+	//alert('page is loaded');
+	$('h1#foo').mouseover(function () {
+		$('h1#foo').css('background-color', 'blue');
+	});
+
+	$('h1#foo').mouseout(function () {
+		$('h1#foo').css('background-color', 'white');
+	});
+});
+
+
+
+		</script>
+	</head>
+	<body>
+		<h1 id="foo">JQuery Selectors</h1>
+	</body>
+</html>
+
+
+
+
+
+

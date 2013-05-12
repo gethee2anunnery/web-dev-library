@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>AJAX Submit example</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+
+$(document).ready(function() {
+	$("form#animal_form").submit(function(e) {
+		e.preventDefault(); //cancel the default browser form submission
+		//make an ajax request to the server
+		$.get('process_submit.php', 
+			{
+				'animal_name': $("input#animal_name").val()
+			},
+			function(data) {
+				//update the contents of the page when a response is received
+				$("div#foo").html(data);
+			}
+		);
+	})
+});	
+		</script>
+
+	</head>
+	<body>
+		<h1>AJAX Submit Example</h1>
+
+		<form id="animal_form" action="process_submit.php">
+			<label for="animal_name">Your favorite animal</label>
+			<input id="animal_name" name="animal_name" type="text" />
+			<input type="submit" value="Submit it!" />
+		</form>
+
+		<!-- This div is going to be filled in with whatever data we receive from the server -->
+		<div id="foo">
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

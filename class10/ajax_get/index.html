@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>AJAX GET example</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+$(document).ready(function() {
+	$("a#foo").click(function(e) {
+		e.preventDefault(); //cancel the link's normal behavior
+		
+		//make an AJAX request to the server, and update the div#bar with the response data
+		$("div#bar").load('_snippet.html');
+/*
+		//an alternate way of doing the exact same thing
+		$.get('_snippet.html', function(data) {
+			$("div#bar").html(data);
+		});
+*/
+
+	});
+});	
+		</script>
+
+	</head>
+	<body>
+		<h1>AJAX Get Example</h1>
+		<p>
+			Clicking the link will make an AJAX GET request to the server.  
+			<br />
+			Once the server responds, the page will update and show the data from the server response.
+		</p>
+		<a id="foo" href="#">Click me</a>
+
+		<div id="bar">
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

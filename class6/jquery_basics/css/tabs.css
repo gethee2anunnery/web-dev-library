@@ -1,0 +1,44 @@
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 1px;
+}
+ul li {
+	width: 100px;
+	float: left;
+	text-align: center;
+	text-decoration: underline;
+	cursor: pointer;
+	border: 1px solid red;
+	border-left-width: 0px;
+	background-color: #c0c0c0;
+}
+ul li.first {
+	border-left-width: 1px;
+}
+ul li.selected {
+	background-color: white;
+	border-bottom-color: white;
+}
+div.clear {
+	clear: both;
+}
+div#tab_content_container {
+	border: 1px solid red;
+}
+div#tab_container {
+	width: 500px;
+}
+div#tab_content_container article {
+	display: none;
+}
+div#tab_content_container article.selected {
+	display: block;
+}
+
+
+
+
+

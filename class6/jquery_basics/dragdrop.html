@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Drag / Drop Example</title>
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+		<script type="text/javascript">
+//wait for the page to load
+$(document).ready(function() {
+	$("div#thanks_message").dialog({
+		'autoOpen': false
+	});
+
+	//make the div draggable
+	$("img#foo").draggable();
+
+	$("img#bin").droppable({
+      drop: function(e, ui) {
+        $("div#thanks_message").dialog("open");
+        $("img#foo").animate({
+        	width: 0,
+        	height: 0,
+        	left: 400,
+        	top: 200
+        }, 350);
+      }
+    });
+
+});
+
+		</script>
+		<style type="text/css">
+div#container {
+	width: 640px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div#thanks_message {
+	display: none;
+}		
+img#foo {
+	position: absolute;
+	left: 500px;
+	top: 500px;
+	z-index: 1;
+}
+img#bin {
+	position: absolute;
+	left: 10px;
+	top: 100px;
+	z-index: 0;
+}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+
+			<h1>Drag / Drop Example</h1>
+			<p>Please recycle the plastic bottle.</p>
+
+			<img id="foo" src="images/bottle.png" />
+
+			<img id="bin" src="images/bin.jpg" />
+
+			<div id="thanks_message" title="Thank You!">
+				<p>Thanks for cooperating!</p>
+			</div>
+
+		</div><!-- //#container -->
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

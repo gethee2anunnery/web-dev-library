@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+	<meta charset="utf-8" />
+	<title>Facebook Javascript Example</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+div#container {
+	width: 960px;
+	margin: 0 auto;
+}	
+li {
+	margin-top: 20px;
+}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Facebook Javascript Example</h1>
+
+		<p>This example shows how to post data to a user's Facebook feed.</p>
+
+		<h2 id="second_heading">Log in to Facebook</h2>
+		<fb:login-button autologoutlink="true">
+			You really should log in to my website now
+		</fb:login-button>
+
+		<p>Click here to <a href="#" onclick="postToFeed();">Post to your feed</a>.</p>
+
+
+	</div>
+
+<!-- BEGIN FACEBOOK API STUFF -->	
+<div id="fb-root"></div>
+<script>
+
+
+	function postToFeed() {
+
+        FB.ui({
+          method: 'feed',
+          redirect_uri: 'http://onepotcooking.com/students/georgewashington/class11/facebook/post_to_api/',
+          link: 'http://wd.onepotcooking.com',
+          picture: 'http://fbrell.com/f8.jpg',
+          name: 'Web Development Intensive',
+          caption: 'with Amos Bloomberg',
+          description: 'The best way to have fun on Saturdays!'
+        }, function() {
+			alert(response['post_id']);
+        });
+
+	};
+
+	window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+		  appId: '363484077104579',                        // App ID from the app dashboard
+		  channelUrl: '//onepotcooking.com/students/georgewashington/class11/facebook/post_to_api/channel.php', // Channel file for x-domain comms
+		  status: true,                                 // Check Facebook Login status
+		  xfbml: true                                  // Look for social plugins on the page
+		});
+
+		//PUT ANY EXTRA FACEBOOK API STUFF HERE
+
+	};
+
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+<!-- END FACEBOOK API STUFF -->	
+
+</body>
+</html>
